@@ -37,7 +37,7 @@ public class Hra {
         this.konecHry = konec;
     }
 
-    public void zkontrolujVitezstvi() { // Ověří, zda byl poražen boss v Bráně šampionů }
+    public void zkontrolujVitezstvi() { /* Ověří, zda byl poražen boss v Bráně šampionů */ }
 
     public Mistnost getAktualniMistnost() {
         return aktualniMistnost;
