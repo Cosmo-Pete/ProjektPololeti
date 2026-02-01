@@ -1,5 +1,5 @@
-import java.util.ArrayList;
 import java.util.List;
+import java.util.ArrayList;
 
 public class Postava {
     private String jmeno;
@@ -18,7 +18,7 @@ public class Postava {
         return dialog;
     }
 
-    // Gettery a settery
+    
     public String getJmeno() {
         return jmeno;
     }
