@@ -1,0 +1,81 @@
+{
+  "startovniMistnost": "Prostranství se stromem",
+  "mistnosti": [
+    {
+      "nazev": "Svatyně zvířat",
+      "popis": "Posvátné místo, kde se setkávají zvířata. Cítíte zde klid a moudrost přírody.",
+      "vychody": {
+        "jih": "Aréna"
+      },
+      "predmety": [],
+      "postava": null
+    },
+    {
+      "nazev": "Obchod",
+      "popis": "Malý obchod s různými předměty. Obchodník vás vítá úsměvem.",
+      "vychody": {
+        "vychod": "Aréna"
+      },
+      "predmety": [],
+      "postava": null
+    },
+    {
+      "nazev": "Aréna",
+      "popis": "Velká aréna, kde se konají souboje. Všude kolem jsou lavice pro diváky.",
+      "vychody": {
+        "zapad": "Obchod",
+        "vychod": "Prostranství se stromem"
+      },
+      "predmety": [],
+      "postava": null
+    },
+    {
+      "nazev": "Prostranství se stromem",
+      "popis": "Otevřené prostranství s obrovským prastarým stromem uprostřed. Strom září jemným světlem.",
+      "vychody": {
+        "zapad": "Aréna",
+      },
+      "predmety": [],
+      "postava": null
+    },
+    {
+      "nazev": "Tréninkové pole",
+      "popis": "Rozlehlé pole určené pro trénink. Vidíte zde různé tréninkové pomůcky.",
+      "vychody": {
+        "sever": "Aréna",
+        "jih": "Šamanova jeskyně"
+      },
+      "predmety": [],
+      "postava": null
+    },
+    {
+      "nazev": "Šamanova jeskyně",
+      "popis": "Temná jeskyně osvětlená svíčkami. Vzduch je plný vůně bylin a kouře.",
+      "vychody": {
+        "sever": "Tréninkové pole",
+        "jih": "Tábor trenéra"
+      },
+      "predmety": [],
+      "postava": null
+    },
+    {
+      "nazev": "Tábor trenéra",
+      "popis": "Jednoduchý tábor s ohništěm uprostřed. Vidíte zde tréninkové vybavení.",
+      "vychody": {
+        "sever": "Šamanova jeskyně",
+        "jih": "Brána šampionů"
+      },
+      "predmety": [],
+      "postava": null
+    },
+    {
+      "nazev": "Brána šampionů",
+      "popis": "Impozantní brána zdobená runami. Cítíte z ní obrovskou moc. Tady čeká finální souboj.",
+      "vychody": {
+        "sever": "Tábor trenéra"
+      },
+      "predmety": [],
+      "postava": null
+    }
+  ]
+}
