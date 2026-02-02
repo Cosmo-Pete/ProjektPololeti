@@ -26,7 +26,27 @@ public class Hra {
     }
 
     public String zpracujPrikaz(String radek) { // Rozpozná příkaz a zavolá proved()
-        return "";
+        Parser parser = new Parser();
+        String[] casti = parser.parsujVstup(radek);
+        
+        if (casti.length == 0) {
+            return "Neplatný příkaz.";
+        }
+        
+        String nazevPrikazu = casti[0];
+        String[] parametry = new String[0];
+        
+        if (casti.length > 1) {
+            parametry = new String[]{casti[1]};
+        }
+        
+        IPrikaz prikaz = mapaPrikazu.get(nazevPrikazu);
+        
+        if (prikaz == null) {
+            return "Příkaz '" + nazevPrikazu + "' není známý.";
+        }
+        
+        return prikaz.proved(parametry, this);
     }
 
     public boolean jeKonec() {
@@ -53,6 +73,10 @@ public class Hra {
 
     public void setBatoh(Batoh batoh) {
         this.batoh = batoh;
+    }
+
+    public Map<String, IPrikaz> getMapaPrikazu() {
+        return mapaPrikazu;
     }
 }
 
