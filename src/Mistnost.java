@@ -16,15 +16,15 @@ public class Mistnost {
         this.postava = null;
     }
 
-    public static Map<String, Mistnost> vytvorMistnosti(NacitacSveta.MistnostDTO[] mistnostiDTO) {
+    public static Map<String, Mistnost> vytvorMistnosti(MistnostDTO[] mistnostiDTO) {
         Map<String, Mistnost> mistnosti = new HashMap<>();
         
-        for (NacitacSveta.MistnostDTO dto : mistnostiDTO) {
+        for (MistnostDTO dto : mistnostiDTO) {
             Mistnost mistnost = new Mistnost(dto.nazev, dto.popis);
             
             // Načtení předmětů
             if (dto.predmety != null) {
-                for (NacitacSveta.PredmetDTO predmetDTO : dto.predmety) {
+                for (PredmetDTO predmetDTO : dto.predmety) {
                     Predmet predmet = new Predmet(predmetDTO.nazev, predmetDTO.popis, predmetDTO.prenositelny);
                     mistnost.vlozPredmet(predmet);
                 }
@@ -36,7 +36,7 @@ public class Mistnost {
                 
                 // Načtení karet
                 if (dto.postava.balicekKaret != null) {
-                    for (NacitacSveta.KartaDTO kartaDTO : dto.postava.balicekKaret) {
+                    for (KartaDTO kartaDTO : dto.postava.balicekKaret) {
                         Karta karta = new Karta(kartaDTO.jmeno, kartaDTO.utok, kartaDTO.obrana, kartaDTO.zivoty);
                         postava.getBalicekKaret().add(karta);
                     }
@@ -51,8 +51,8 @@ public class Mistnost {
         return mistnosti;
     }
 
-    public static void propojVychody(NacitacSveta.MistnostDTO[] mistnostiDTO, Map<String, Mistnost> mistnosti) {
-        for (NacitacSveta.MistnostDTO dto : mistnostiDTO) {
+    public static void propojVychody(MistnostDTO[] mistnostiDTO, Map<String, Mistnost> mistnosti) {
+        for (MistnostDTO dto : mistnostiDTO) {
             Mistnost mistnost = mistnosti.get(dto.nazev);
             if (mistnost == null) continue;
             
