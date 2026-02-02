@@ -4,6 +4,7 @@ public class PrikazNapoveda implements IPrikaz {
         return "";
     }
 
+
     @Override
     public String getNazev() {
         return "napoveda";
