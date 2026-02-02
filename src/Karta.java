@@ -11,9 +11,36 @@ public class Karta {
         this.zivoty = zivoty;
     }
 
-    public void vylepsiStatistiky() { /* Logika pro Moudrý strom */ }
+    public void vylepsiStatistiky() {
+        utok += 2;
+        obrana += 2;
+        zivoty += 5;
+    }
 
-    public void utociNa(Karta souper) { /* Logika souboje */ }
+    public void utociNa(Karta souper) {
+        if (souper == null) return;
+        int poskozeni = Math.max(1, utok - souper.obrana);
+        souper.zivoty -= poskozeni;
+        if (souper.zivoty < 0) {
+            souper.zivoty = 0;
+        }
+    }
+
+    public void setUtok(int utok) {
+        this.utok = utok;
+    }
+
+    public void setObrana(int obrana) {
+        this.obrana = obrana;
+    }
+
+    public void setZivoty(int zivoty) {
+        this.zivoty = zivoty;
+    }
+
+    public boolean jeZiva() {
+        return zivoty > 0;
+    }
 
     public String getJmeno() {
         return jmeno;
