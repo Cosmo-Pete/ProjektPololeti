@@ -86,7 +86,41 @@ public class Mistnost {
     }
 
     public String dlouhyPopis() {
-        return ""; // Vypíše název, popis, východy, předměty a postavu
+        String popis = "Místnost: " + nazev + "\n";
+        popis += "Popis: " + this.popis + "\n";
+        
+        if (!vychody.isEmpty()) {
+            popis += "Východy: ";
+            boolean prvni = true;
+            for (String smer : vychody.keySet()) {
+                Mistnost cil = vychody.get(smer);
+                if (!prvni) {
+                    popis += ", ";
+                }
+                popis += smer + " - " + cil.getNazev();
+                prvni = false;
+            }
+            popis += "\n";
+        }
+        
+        if (!predmety.isEmpty()) {
+            popis += "Předměty: ";
+            boolean prvni = true;
+            for (Predmet predmet : predmety.values()) {
+                if (!prvni) {
+                    popis += ", ";
+                }
+                popis += predmet.getNazev() + " - " + predmet.getPopis();
+                prvni = false;
+            }
+            popis += "\n";
+        }
+        
+        if (postava != null) {
+            popis += "Postava: " + postava.getJmeno() + "\n";
+        }
+        
+        return popis;
     }
 
     public String getNazev() {
