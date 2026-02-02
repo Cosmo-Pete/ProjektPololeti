@@ -3,11 +3,22 @@
   "mistnosti": [
     {
       "nazev": "Svatyně zvířat",
-      "popis": "Posvátné místo, kde se setkávají zvířata. Cítíte zde klid a moudrost přírody.",
+      "popis": "Posvátné místo, kde se setkávají zvířata. Cítíte zde klid a moudrost přírody. Na oltáři leží vzácné karty.",
       "vychody": {
         "jih": "Aréna"
       },
-      "predmety": [],
+      "predmety": [
+        {
+          "nazev": "Karta vlka",
+          "popis": "Vzácná karta s vyobrazením vlka",
+          "prenositelny": false
+        },
+        {
+          "nazev": "Karta medvěda",
+          "popis": "Mocná karta s vyobrazením medvěda",
+          "prenositelny": false
+        }
+      ],
       "postava": null
     },
     {
@@ -16,66 +27,201 @@
       "vychody": {
         "vychod": "Aréna"
       },
-      "predmety": [],
-      "postava": null
+      "predmety": [
+        {
+          "nazev": "Léčivý lektvar",
+          "popis": "Lektvar, který doplní životy karty o 20",
+          "prenositelny": true
+        },
+        {
+          "nazev": "Amulet síly",
+          "popis": "Amulet, který zvýší útok karty o 5",
+          "prenositelny": true
+        },
+        {
+          "nazev": "Magický kámen",
+          "popis": "Kámen s magickou energií",
+          "prenositelny": true
+        }
+      ],
+      "postava": {
+        "jmeno": "Obchodník",
+        "dialog": "Vítejte v mém obchodě! Mám tu spoustu užitečných předmětů a karet. Co si přejete?",
+        "jeNepritel": false,
+        "balicekKaret": [
+          {
+            "jmeno": "Karta orla",
+            "utok": 8,
+            "obrana": 4,
+            "zivoty": 18
+          },
+          {
+            "jmeno": "Karta lišky",
+            "utok": 6,
+            "obrana": 5,
+            "zivoty": 15
+          }
+        ]
+      }
     },
     {
       "nazev": "Aréna",
       "popis": "Velká aréna, kde se konají souboje. Všude kolem jsou lavice pro diváky.",
       "vychody": {
         "zapad": "Obchod",
-        "vychod": "Prostranství se stromem"
+        "vychod": "Prostranství se stromem",
+        "jih": "Tréninkové pole"
       },
-      "predmety": [],
-      "postava": null
+      "predmety": [
+        {
+          "nazev": "Svitok moudrosti",
+          "popis": "Starobylý svitek s tajemnými runami",
+          "prenositelny": true
+        }
+      ],
+      "postava": {
+        "jmeno": "Trenér",
+        "dialog": "Vítej v aréně! Připrav se na souboj!",
+        "jeNepritel": true,
+        "balicekKaret": [
+          {
+            "jmeno": "Karta bojovníka",
+            "utok": 10,
+            "obrana": 6,
+            "zivoty": 25
+          }
+        ]
+      }
     },
     {
       "nazev": "Prostranství se stromem",
-      "popis": "Otevřené prostranství s obrovským prastarým stromem uprostřed. Strom září jemným světlem.",
+      "popis": "Otevřené prostranství s obrovským prastarým stromem uprostřed. Strom září jemným světlem a cítíte z něj magickou energii.",
       "vychody": {
+        "sever": "Svatyně zvířat",
         "zapad": "Aréna",
+        "jih": "Tréninkové pole"
       },
-      "predmety": [],
-      "postava": null
+      "predmety": [
+        {
+          "nazev": "Moudrý strom",
+          "popis": "Prastarý strom, který umožňuje vylepšování karet",
+          "prenositelny": false
+        }
+      ],
+      "postava": {
+        "jmeno": "Moudrý strom",
+        "dialog": "Vítej, mladý šampione. Přines mi kartu a já ji vylepším svou moudrostí.",
+        "jeNepritel": false,
+        "balicekKaret": []
+      }
     },
     {
       "nazev": "Tréninkové pole",
-      "popis": "Rozlehlé pole určené pro trénink. Vidíte zde různé tréninkové pomůcky.",
+      "popis": "Rozlehlé pole určené pro trénink. Vidíte zde různé tréninkové pomůcky a cvičící trenéry.",
       "vychody": {
         "sever": "Aréna",
         "jih": "Šamanova jeskyně"
       },
-      "predmety": [],
-      "postava": null
+      "predmety": [
+        {
+          "nazev": "Léčivý lektvar",
+          "popis": "Lektvar, který doplní životy karty o 15",
+          "prenositelny": true
+        }
+      ],
+      "postava": {
+        "jmeno": "Tréninkový trenér",
+        "dialog": "Chceš si vyzkoušet své karty? Připrav se na tréninkový souboj!",
+        "jeNepritel": true,
+        "balicekKaret": [
+          {
+            "jmeno": "Karta cvičence",
+            "utok": 7,
+            "obrana": 5,
+            "zivoty": 20
+          }
+        ]
+      }
     },
     {
       "nazev": "Šamanova jeskyně",
-      "popis": "Temná jeskyně osvětlená svíčkami. Vzduch je plný vůně bylin a kouře.",
+      "popis": "Temná jeskyně osvětlená svíčkami. Vzduch je plný vůně bylin a kouře. Uprostřed stojí obětní oltář.",
       "vychody": {
         "sever": "Tréninkové pole",
         "jih": "Tábor trenéra"
       },
-      "predmety": [],
-      "postava": null
+      "predmety": [
+        {
+          "nazev": "Obětní oltář",
+          "popis": "Starobylý oltář pro obětování karet",
+          "prenositelny": false
+        },
+        {
+          "nazev": "Amulet ochrany",
+          "popis": "Amulet, který zvýší obranu karty o 5",
+          "prenositelny": true
+        }
+      ],
+      "postava": {
+        "jmeno": "Vlčí šaman",
+        "dialog": "Vítej v mé jeskyni. Přines mi kartu k obětování a já posílím jinou tvou kartu.",
+        "jeNepritel": false,
+        "balicekKaret": []
+      }
     },
     {
       "nazev": "Tábor trenéra",
-      "popis": "Jednoduchý tábor s ohništěm uprostřed. Vidíte zde tréninkové vybavení.",
+      "popis": "Jednoduchý tábor s ohništěm uprostřed. Vidíte zde tréninkové vybavení a odpočívajícího trenéra.",
       "vychody": {
         "sever": "Šamanova jeskyně",
         "jih": "Brána šampionů"
       },
-      "predmety": [],
-      "postava": null
+      "predmety": [
+        {
+          "nazev": "Velký lektvar",
+          "popis": "Silný lektvar, který doplní životy karty o 30",
+          "prenositelny": true
+        },
+        {
+          "nazev": "Svitok síly",
+          "popis": "Svitok, který zvýší útok karty o 8",
+          "prenositelny": true
+        }
+      ],
+      "postava": {
+        "jmeno": "Hlavní trenér",
+        "dialog": "Tady můžeš spravovat svůj inventář a odpočinout si. Ale pozor, za branou čeká nebezpečí!",
+        "jeNepritel": true,
+        "balicekKaret": [
+          {
+            "jmeno": "Karta mistra",
+            "utok": 12,
+            "obrana": 8,
+            "zivoty": 30
+          }
+        ]
+      }
     },
     {
       "nazev": "Brána šampionů",
-      "popis": "Impozantní brána zdobená runami. Cítíte z ní obrovskou moc. Tady čeká finální souboj.",
+      "popis": "Impozantní brána zdobená runami. Cítíte z ní obrovskou moc. Tady čeká finální souboj s nejmocnějším protivníkem.",
       "vychody": {
         "sever": "Tábor trenéra"
       },
       "predmety": [],
-      "postava": null
+      "postava": {
+        "jmeno": "Boss",
+        "dialog": "Konečně jsi přišel! Připrav se na svůj poslední souboj! Poraz mě a staneš se šampionem!",
+        "jeNepritel": true,
+        "balicekKaret": [
+          {
+            "jmeno": "Karta šampiona",
+            "utok": 20,
+            "obrana": 15,
+            "zivoty": 50
+          }
+        ]
+      }
     }
   ]
 }
