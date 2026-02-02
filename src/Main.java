@@ -18,6 +18,7 @@ public class Main {
         hra.getMapaPrikazu().put("obetuj", new PrikazObetuj());
         hra.getMapaPrikazu().put("pomoc", new PrikazPomoc());
         hra.getMapaPrikazu().put("ukonci", new PrikazUkonci());
+        hra.getMapaPrikazu().put("pouzij", new PrikazPouzij());
         
         Scanner scanner = new Scanner(System.in);
         System.out.println("Vítej ve hře! Zadej příkaz (např. 'pomoc' pro nápovědu):");
