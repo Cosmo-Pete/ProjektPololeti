@@ -1,6 +1,6 @@
 public class PrikazNapoveda implements IPrikaz {
     @Override
-    public String proved(String[] parametry, Hra hra) { /* Spustí souboj mezi vyloženou kartou a NPC */
+    public String proved(String[] parametry, Hra hra) {
         return "";
     }
 
