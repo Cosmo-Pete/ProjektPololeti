@@ -51,6 +51,14 @@ public class PrikazUtok implements IPrikaz {
         if (!karta.jeZiva()) {
             batoh.odeberKartu(karta);
             vysledek += "Nepřítel porazil tvou kartu '" + karta.getJmeno() + "'.";
+            
+            // Kontrola, zda hráč má ještě nějaké karty
+            if (batoh.getKarty().isEmpty()) {
+                hra.setKonecHry(true);
+                vysledek += " Nemáš žádné karty. Prohrál jsi!";
+                return vysledek;
+            }
+            
             return vysledek;
         }
 
