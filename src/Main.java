@@ -21,6 +21,7 @@ public class Main {
         hra.getMapaPrikazu().put("pouzij", new PrikazPouzij());
         hra.getMapaPrikazu().put("prozkoumej", new PrikazProzkoumej());
         hra.getMapaPrikazu().put("mluv", new PrikazMluv());
+        hra.getMapaPrikazu().put("napoveda", new PrikazNapoveda());
         
         Scanner scanner = new Scanner(System.in);
         System.out.println("===================================================");
