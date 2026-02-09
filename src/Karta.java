@@ -3,6 +3,7 @@ public class Karta {
     private int utok;
     private int obrana;
     private int zivoty;
+    private int maxZivoty;
     private int pocetVylepseni;
 
     public Karta(String jmeno, int utok, int obrana, int zivoty) {
@@ -10,6 +11,7 @@ public class Karta {
         this.utok = utok;
         this.obrana = obrana;
         this.zivoty = zivoty;
+        this.maxZivoty = zivoty;
         this.pocetVylepseni = 0;
     }
 
@@ -19,7 +21,8 @@ public class Karta {
         }
         utok += 2;
         obrana += 2;
-        zivoty += 5;
+        maxZivoty += 5;
+        zivoty = maxZivoty;
         pocetVylepseni++;
         return true;
     }
@@ -42,7 +45,7 @@ public class Karta {
     }
 
     public void setZivoty(int zivoty) {
-        this.zivoty = zivoty;
+        this.zivoty = Math.min(zivoty, maxZivoty);
     }
 
     public boolean jeZiva() {
