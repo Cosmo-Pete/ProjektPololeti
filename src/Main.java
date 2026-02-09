@@ -20,9 +20,15 @@ public class Main {
         hra.getMapaPrikazu().put("ukonci", new PrikazUkonci());
         hra.getMapaPrikazu().put("pouzij", new PrikazPouzij());
         hra.getMapaPrikazu().put("prozkoumej", new PrikazProzkoumej());
+        hra.getMapaPrikazu().put("mluv", new PrikazMluv());
         
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Vítej ve hře! Zadej příkaz (např. 'pomoc' pro nápovědu):");
+        System.out.println("===================================================");
+        System.out.println("Vítej ve hře!");
+        System.out.println("===================================================");
+        System.out.println("Jsi na začátku svého dobrodružství.");
+        System.out.println("Máš k dispozici startovní kartu a batoh.");
+        System.out.println("Zadej příkaz (např. 'pomoc' pro nápovědu):");
         
         while (!hra.jeKonec()) {
             System.out.print("> ");
