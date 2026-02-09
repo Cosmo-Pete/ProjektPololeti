@@ -19,6 +19,11 @@ public class NacitacSveta {
         Hra hra = new Hra();
         hra.setAktualniMistnost(mistnosti.get(svetDTO.startovniMistnost));
         hra.setBatoh(new Batoh());
+        
+        // Přidání startovní karty
+        Karta startovniKarta = new Karta("Začátečnická karta", 5, 5, 10);
+        hra.getBatoh().pridejKartu(startovniKarta);
+        
         return hra;
     }
 }
