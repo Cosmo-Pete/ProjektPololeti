@@ -35,7 +35,9 @@ public class PrikazVylepsi implements IPrikaz {
         // }
 
         // Vylepšení karty
-        karta.vylepsiStatistiky();
+        if (!karta.vylepsiStatistiky()) {
+            return "Kartu '" + karta.getJmeno() + "' již nelze vylepšit. Počkej na další boj.";
+        }
         return "Vylepšil jsi kartu: " + karta.getJmeno() + ". Nové statistiky: Útok: " + karta.getUtok() + ", Obrana: " + karta.getObrana() + ", Životy: " + karta.getZivoty() + ".";
     }
 

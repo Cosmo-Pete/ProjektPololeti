@@ -54,6 +54,9 @@ public class PrikazUtok implements IPrikaz {
             return vysledek;
         }
 
+        // Resetování počtu vylepšení po boji
+        karta.resetVylepseni();
+
         vysledek += "Boj pokračuje. Karta '" + karta.getJmeno() + "' má " + karta.getZivoty() + " životů.";
         return vysledek;
     }

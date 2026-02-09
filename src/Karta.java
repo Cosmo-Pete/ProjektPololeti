@@ -13,10 +13,15 @@ public class Karta {
         this.pocetVylepseni = 0;
     }
 
-    public void vylepsiStatistiky() {
+    public boolean vylepsiStatistiky() {
+        if (pocetVylepseni >= 1) {
+            return false;
+        }
         utok += 2;
         obrana += 2;
         zivoty += 5;
+        pocetVylepseni++;
+        return true;
     }
 
     public void utociNa(Karta souper) {
@@ -42,6 +47,10 @@ public class Karta {
 
     public boolean jeZiva() {
         return zivoty > 0;
+    }
+
+    public void resetVylepseni() {
+        pocetVylepseni = 0;
     }
 
     public String getJmeno() {
