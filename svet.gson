@@ -50,13 +50,13 @@
         "jeNepritel": false,
         "balicekKaret": [
           {
-            "jmeno": "Karta orla",
+            "jmeno": "Drak",
             "utok": 8,
             "obrana": 4,
             "zivoty": 18
           },
           {
-            "jmeno": "Karta lišky",
+            "jmeno": "Vlk",
             "utok": 6,
             "obrana": 5,
             "zivoty": 15
@@ -85,7 +85,7 @@
         "jeNepritel": true,
         "balicekKaret": [
           {
-            "jmeno": "Karta bojovníka",
+            "jmeno": "Rytíř",
             "utok": 10,
             "obrana": 6,
             "zivoty": 25
@@ -135,7 +135,7 @@
         "jeNepritel": true,
         "balicekKaret": [
           {
-            "jmeno": "Karta cvičence",
+            "jmeno": "Šermíř",
             "utok": 7,
             "obrana": 5,
             "zivoty": 20
@@ -194,7 +194,7 @@
         "jeNepritel": true,
         "balicekKaret": [
           {
-            "jmeno": "Karta mistra",
+            "jmeno": "Král",
             "utok": 12,
             "obrana": 8,
             "zivoty": 30
@@ -215,7 +215,7 @@
         "jeNepritel": true,
         "balicekKaret": [
           {
-            "jmeno": "Karta šampiona",
+            "jmeno": "Démon",
             "utok": 20,
             "obrana": 15,
             "zivoty": 50
