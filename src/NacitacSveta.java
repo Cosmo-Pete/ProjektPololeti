@@ -21,7 +21,7 @@ public class NacitacSveta {
         hra.setBatoh(new Batoh());
         
         // Přidání startovní karty
-        Karta startovniKarta = new Karta("Začátečnická karta", 5, 5, 10);
+        Karta startovniKarta = new Karta("Začátečnická karta", 8, 6, 15);
         hra.getBatoh().pridejKartu(startovniKarta);
         
         return hra;
