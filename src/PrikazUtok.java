@@ -41,7 +41,8 @@ public class PrikazUtok implements IPrikaz {
         
         if (!nepritelovaKarta.jeZiva()) {
             postava.getBalicekKaret().remove(nepritelovaKarta);
-            vysledek += "Porazil jsi nepřítele! Karta '" + karta.getJmeno() + "' porazila kartu '" + nepritelovaKarta.getJmeno() + "'.";
+            batoh.pridejKartu(nepritelovaKarta);
+            vysledek += "Porazil jsi nepřítele! Karta '" + karta.getJmeno() + "' porazila kartu '" + nepritelovaKarta.getJmeno() + "'. Získal jsi kartu '" + nepritelovaKarta.getJmeno() + "'.";
             return vysledek;
         }
 
