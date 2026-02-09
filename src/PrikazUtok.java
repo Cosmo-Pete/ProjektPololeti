@@ -1,13 +1,9 @@
 public class PrikazUtok implements IPrikaz {
     @Override
     public String proved(String[] parametry, Hra hra) {
-        if (parametry == null || parametry.length == 0) {
-            return "Musíš zadat název karty, kterou chceš vyložit pro boj.";
-        }
-
-        String nazevKarty = parametry[0];
         Batoh batoh = hra.getBatoh();
         Mistnost aktualniMistnost = hra.getAktualniMistnost();
+        Karta karta = hra.getAktivniKarta();
         
         if (batoh == null) {
             return "Batoh není dostupný.";
@@ -17,10 +13,8 @@ public class PrikazUtok implements IPrikaz {
             return "Není nastavena aktuální místnost.";
         }
 
-        Karta karta = batoh.najdiKartu(nazevKarty);
-        
         if (karta == null) {
-            return "Karta '" + nazevKarty + "' není v batohu.";
+            return "Není vyložena žádná karta. Nejprve vylož kartu pomocí příkazu 'hraj'.";
         }
 
         Postava postava = aktualniMistnost.getPostava();
@@ -39,22 +33,28 @@ public class PrikazUtok implements IPrikaz {
 
         Karta nepritelovaKarta = postava.getBalicekKaret().get(0);
         
+        // Výpis statistik nepřitelovy karty
+        String vysledek = "Nepřítel vyložil kartu: " + nepritelovaKarta.getJmeno() + " [Útok: " + nepritelovaKarta.getUtok() + ", Obrana: " + nepritelovaKarta.getObrana() + ", Životy: " + nepritelovaKarta.getZivoty() + "]\n";
+        
         // Boj mezi kartami
         karta.utociNa(nepritelovaKarta);
         
         if (!nepritelovaKarta.jeZiva()) {
             postava.getBalicekKaret().remove(nepritelovaKarta);
-            return "Porazil jsi nepřítele! Karta '" + karta.getJmeno() + "' porazila kartu '" + nepritelovaKarta.getJmeno() + "'.";
+            vysledek += "Porazil jsi nepřítele! Karta '" + karta.getJmeno() + "' porazila kartu '" + nepritelovaKarta.getJmeno() + "'.";
+            return vysledek;
         }
 
         nepritelovaKarta.utociNa(karta);
         
         if (!karta.jeZiva()) {
             batoh.odeberKartu(karta);
-            return "Nepřítel porazil tvou kartu '" + karta.getJmeno() + "'.";
+            vysledek += "Nepřítel porazil tvou kartu '" + karta.getJmeno() + "'.";
+            return vysledek;
         }
 
-        return "Boj pokračuje. Karta '" + karta.getJmeno() + "' má " + karta.getZivoty() + " životů.";
+        vysledek += "Boj pokračuje. Karta '" + karta.getJmeno() + "' má " + karta.getZivoty() + " životů.";
+        return vysledek;
     }
 
     @Override

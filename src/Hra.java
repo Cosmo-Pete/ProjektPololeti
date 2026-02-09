@@ -6,10 +6,12 @@ public class Hra {
     private Batoh batoh;
     private boolean konecHry;
     private Map<String, IPrikaz> mapaPrikazu;
+    private Karta aktivniKarta;
 
     public Hra() {
         this.konecHry = false;
         this.mapaPrikazu = new HashMap<>();
+        this.aktivniKarta = null;
     }
 
     public void inicializujHru() {
@@ -77,6 +79,14 @@ public class Hra {
 
     public Map<String, IPrikaz> getMapaPrikazu() {
         return mapaPrikazu;
+    }
+
+    public Karta getAktivniKarta() {
+        return aktivniKarta;
+    }
+
+    public void setAktivniKarta(Karta aktivniKarta) {
+        this.aktivniKarta = aktivniKarta;
     }
 }
 

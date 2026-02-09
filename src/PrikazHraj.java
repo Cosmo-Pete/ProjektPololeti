@@ -17,7 +17,10 @@ public class PrikazHraj implements IPrikaz {
             return "Kartu '" + nazevKarty + "' nemáš v batohu.";
         }
 
-        // Karta se přidá do batohu (už tam je), ale můžeme zobrazit její statistiky
+        // Nastavení aktivní karty
+        hra.setAktivniKarta(karta);
+        
+        // Zobrazení statistik karty
         return "Hraješ kartu: " + karta.getJmeno() + 
                " [Útok: " + karta.getUtok() + 
                ", Obrana: " + karta.getObrana() + 
