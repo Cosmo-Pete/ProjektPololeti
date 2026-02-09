@@ -18,7 +18,7 @@ public class PrikazVylepsi implements IPrikaz {
         }
 
         // Kontrola, zda je hráč u moudrého stromu
-        if (!aktualniMistnost.getNazev().equals("Moudrý strom")) {
+        if (!aktualniMistnost.getNazev().equals("Prostranství se stromem")) {
             return "Vylepšování karet je možné pouze u moudrého stromu.";
         }
 
