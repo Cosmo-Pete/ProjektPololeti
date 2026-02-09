@@ -3,12 +3,14 @@ public class Karta {
     private int utok;
     private int obrana;
     private int zivoty;
+    private int pocetVylepseni;
 
     public Karta(String jmeno, int utok, int obrana, int zivoty) {
         this.jmeno = jmeno;
         this.utok = utok;
         this.obrana = obrana;
         this.zivoty = zivoty;
+        this.pocetVylepseni = 0;
     }
 
     public void vylepsiStatistiky() {
