@@ -58,6 +58,10 @@ public class PrikazUtok implements IPrikaz {
             postava.getBalicekKaret().remove(nepritelovaKarta);
             batoh.pridejKartu(nepritelovaKarta);
             vysledek += "Porazil jsi nepřítele! Karta '" + karta.getJmeno() + "' porazila kartu '" + nepritelovaKarta.getJmeno() + "'. Získal jsi kartu '" + nepritelovaKarta.getJmeno() + "'.";
+            
+            // Kontrola, zda hráč vyhrál hru
+            hra.zkontrolujVitezstvi();
+            
             return vysledek;
         }
 

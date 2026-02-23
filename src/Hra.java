@@ -93,9 +93,20 @@ public class Hra {
 
     /**
      * Zkontroluje, zda hráč vyhrál hru.
-     * Aktuálně prázdná metoda pro budoucí implementaci.
+     * Pokud je hráč v Bráně šampionů a poražil bosse, hra se ukončí jako vítězství.
      */
-    public void zkontrolujVitezstvi() { /* Ověří, zda byl poražen boss v Bráně šampionů */ }
+    public void zkontrolujVitezstvi() {
+        // Ověří, zda je hráč v Bráně šampionů
+        if (aktualniMistnost != null && aktualniMistnost.getNazev().equals("Brána šampionů")) {
+            Postava postava = aktualniMistnost.getPostava();
+            
+            // Ověří, zda je v místnosti boss a zda byl poražen
+            if (postava != null && postava.isJeNepritel() && postava.getBalicekKaret().isEmpty()) {
+                setKonecHry(true);
+                System.out.println("Gratulujeme! Porazil jsi bosse v Bráně šampionů a vyhrál jsi hru!");
+            }
+        }
+    }
 
     /**
      * Vrací aktuální místnost.
