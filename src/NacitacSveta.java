@@ -3,7 +3,22 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Map;
 
+/**
+ * Třída pro načítání světa hry ze souboru.
+ * Používá Gson knihovnu pro deserializaci JSON souboru.
+ *
+ * @author Petr Pospíchal
+ * @version 1.0
+ */
 public class NacitacSveta {
+    
+    /**
+     * Načte svět hry ze souboru a vytvoří instanci hry.
+     *
+     * @param cesta Cesta k souboru se světem
+     * @return Inicializovaná instance hry
+     * @throws IOException Pokud dojde k chybě při čtení souboru
+     */
     public Hra nactiZeSouboru(String cesta) throws IOException {
         Gson gson = new Gson();
         // Načítání světa přímo do DTO

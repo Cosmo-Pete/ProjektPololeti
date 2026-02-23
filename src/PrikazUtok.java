@@ -1,4 +1,19 @@
+/**
+ * Příkaz pro útok na nepřítele.
+ * Umožňuje hráčovi bojovat s nepřáteli pomocí karet.
+ *
+ * @author Petr Pospíchal
+ * @version 1.0
+ */
 public class PrikazUtok implements IPrikaz {
+    
+    /**
+     * Provede příkaz utok - zahájí boj s nepřítelem.
+     *
+     * @param parametry Parametry příkazu (nepoužívají se)
+     * @param hra Instance hry
+     * @return Zpráva o výsledku boje
+     */
     @Override
     public String proved(String[] parametry, Hra hra) {
         Batoh batoh = hra.getBatoh();
@@ -69,6 +84,11 @@ public class PrikazUtok implements IPrikaz {
         return vysledek;
     }
 
+    /**
+     * Vrací název příkazu.
+     *
+     * @return Název příkazu ("utok")
+     */
     @Override
     public String getNazev() {
         return "utok";

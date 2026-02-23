@@ -1,8 +1,20 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+/**
+ * Hlavní třída aplikace - vstupní bod hry Pololeti.
+ * Stará se o inicializaci hry a hlavní herní smyčku.
+ *
+ * @author Petr Pospíchal
+ * @version 1.0
+ */
 import java.util.Scanner;
 
 public class Main {
+    
+    /**
+     * Hlavní metoda - vstupní bod aplikace.
+     * Inicializuje hru, registruje příkazy a spouští hlavní herní smyčku.
+     *
+     * @param args Parametry příkazové řádky (nepoužívají se)
+     */
     public static void main(String[] args) {
         Hra hra = new Hra();
         hra.inicializujHru();
@@ -31,6 +43,7 @@ public class Main {
         System.out.println("Máš k dispozici startovní kartu a batoh.");
         System.out.println("Zadej příkaz (např. 'pomoc' pro nápovědu):");
         
+        // Hlavní herní smyčka
         while (!hra.jeKonec()) {
             System.out.print("> ");
             String vstup = scanner.nextLine();

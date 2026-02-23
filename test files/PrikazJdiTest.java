@@ -1,8 +1,19 @@
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Testovací třída pro příkaz Jdi.
+ * Obsahuje testy pro pohyb mezi místnostmi.
+ *
+ * @author Petr Pospíchal
+ * @version 1.0
+ */
 public class PrikazJdiTest {
 
+    /**
+     * Test provedení příkazu jdi.
+     * Ověřuje správný pohyb mezi místnostmi a chování při neplatných směrech.
+     */
     @Test
     public void testPrikazJdiProved() {
         Hra hra = new Hra();

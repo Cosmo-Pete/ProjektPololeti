@@ -1,8 +1,19 @@
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Testovací třída pro příkaz Vezmi.
+ * Obsahuje testy pro sebírání předmětů.
+ *
+ * @author Petr Pospíchal
+ * @version 1.0
+ */
 public class PrikazVezmiTest {
 
+    /**
+     * Test provedení příkazu vezmi.
+     * Ověřuje správné sebírání předmětů a chování při neexistujících předmětech.
+     */
     @Test
     public void testPrikazVezmiProved() {
         Hra hra = new Hra();

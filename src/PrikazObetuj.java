@@ -1,4 +1,19 @@
+/**
+ * Příkaz pro obětování karty.
+ * Umožňuje hráčovi obětovat jednu kartu pro posílení jiné karty u vlčího šamana.
+ *
+ * @author Petr Pospíchal
+ * @version 1.0
+ */
 public class PrikazObetuj implements IPrikaz {
+    
+    /**
+     * Provede příkaz obetuj - obětuje jednu kartu pro posílení jiné.
+     *
+     * @param parametry Parametry příkazu (název obětované karty, název posilované karty)
+     * @param hra Instance hry
+     * @return Zpráva o výsledku obětování
+     */
     @Override
     public String proved(String[] parametry, Hra hra) {
         if (parametry == null || parametry.length < 2) {
@@ -42,6 +57,11 @@ public class PrikazObetuj implements IPrikaz {
         return "Obětoval jsi kartu '" + obetovanaKarta.getJmeno() + "' a posílil jsi kartu '" + posilovanaKarta.getJmeno() + "'.";
     }
 
+    /**
+     * Vrací název příkazu.
+     *
+     * @return Název příkazu ("obetuj")
+     */
     @Override
     public String getNazev() {
         return "obetuj";

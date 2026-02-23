@@ -1,8 +1,19 @@
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Testovací třída pro třídu Batoh.
+ * Obsahuje testy pro manipulaci s předměty v batohu.
+ *
+ * @author Petr Pospíchal
+ * @version 1.0
+ */
 public class BatohTest {
 
+    /**
+     * Test přidávání předmětů do batohu.
+     * Ověřuje správné chování při přidávání platných i neplatných předmětů.
+     */
     @Test
     public void testPridejPredmet() {
         Batoh batoh = new Batoh();
@@ -22,6 +33,10 @@ public class BatohTest {
         assertFalse(batoh.pridejPredmet(new Predmet("extra", "Extra", true)));
     }
 
+    /**
+     * Test vyhazování předmětů z batohu.
+     * Ověřuje správné chování při vyhazování existujících i neexistujících předmětů.
+     */
     @Test
     public void testVyhodPredmet() {
         Batoh batoh = new Batoh();

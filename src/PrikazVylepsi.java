@@ -1,4 +1,19 @@
+/**
+ * Příkaz pro vylepšení karty.
+ * Umožňuje hráčovi vylepšit statistiky své karty u moudrého stromu.
+ *
+ * @author Petr Pospíchal
+ * @version 1.0
+ */
 public class PrikazVylepsi implements IPrikaz {
+    
+    /**
+     * Provede příkaz vylepsi - vylepší statistiky karty.
+     *
+     * @param parametry Parametry příkazu (název karty)
+     * @param hra Instance hry
+     * @return Zpráva o výsledku vylepšení
+     */
     @Override
     public String proved(String[] parametry, Hra hra) {
         if (parametry == null || parametry.length == 0) {
@@ -41,6 +56,11 @@ public class PrikazVylepsi implements IPrikaz {
         return "Vylepšil jsi kartu: " + karta.getJmeno() + ". Nové statistiky: Útok: " + karta.getUtok() + ", Obrana: " + karta.getObrana() + ", Životy: " + karta.getZivoty() + ".";
     }
 
+    /**
+     * Vrací název příkazu.
+     *
+     * @return Název příkazu ("vylepsi")
+     */
     @Override
     public String getNazev() {
         return "vylepsi";

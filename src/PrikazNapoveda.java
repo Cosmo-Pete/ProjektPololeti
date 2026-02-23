@@ -1,4 +1,19 @@
+/**
+ * Příkaz pro zobrazení podrobné nápovědy.
+ * Poskytuje detailní informace o hře a jejích mechanikách.
+ *
+ * @author Petr Pospíchal
+ * @version 1.0
+ */
 public class PrikazNapoveda implements IPrikaz {
+    
+    /**
+     * Provede příkaz napoveda - zobrazí podrobnou nápovědu.
+     *
+     * @param parametry Parametry příkazu (nepoužívají se)
+     * @param hra Instance hry
+     * @return Podrobná nápověda k hře
+     */
     @Override
     public String proved(String[] parametry, Hra hra) {
         return "Vítej v nápovědě k hře Projekt Pololeti!\n\n" +

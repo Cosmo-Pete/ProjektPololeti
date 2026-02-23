@@ -1,4 +1,19 @@
+/**
+ * Příkaz pro výběr aktivní karty.
+ * Umožňuje hráčovi vybrat kartu, kterou bude používat v boji.
+ *
+ * @author Petr Pospíchal
+ * @version 1.0
+ */
 public class PrikazHraj implements IPrikaz {
+    
+    /**
+     * Provede příkaz hraj - nastaví aktivní kartu.
+     *
+     * @param parametry Parametry příkazu (název karty)
+     * @param hra Instance hry
+     * @return Zpráva o výsledku provedení příkazu
+     */
     @Override
     public String proved(String[] parametry, Hra hra) {
         if (parametry == null || parametry.length == 0) {
@@ -27,6 +42,11 @@ public class PrikazHraj implements IPrikaz {
                ", Životy: " + karta.getZivoty() + "]";
     }
 
+    /**
+     * Vrací název příkazu.
+     *
+     * @return Název příkazu ("hraj")
+     */
     @Override
     public String getNazev() {
         return "hraj";

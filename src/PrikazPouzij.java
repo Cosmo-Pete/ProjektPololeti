@@ -1,4 +1,19 @@
+/**
+ * Příkaz pro použití předmětu.
+ * Umožňuje hráčovi použít předměty z batohu pro různé účely.
+ *
+ * @author Petr Pospíchal
+ * @version 1.0
+ */
 public class PrikazPouzij implements IPrikaz {
+    
+    /**
+     * Provede příkaz pouzij - použije předmět z batohu.
+     *
+     * @param parametry Parametry příkazu (název předmětu)
+     * @param hra Instance hry
+     * @return Zpráva o výsledku použití předmětu
+     */
     @Override
     public String proved(String[] parametry, Hra hra) {
         if (parametry == null || parametry.length == 0) {
@@ -72,6 +87,11 @@ public class PrikazPouzij implements IPrikaz {
         }
     }
 
+    /**
+     * Vrací název příkazu.
+     *
+     * @return Název příkazu ("pouzij")
+     */
     @Override
     public String getNazev() {
         return "pouzij";

@@ -1,4 +1,19 @@
+/**
+ * Příkaz pro pokládání předmětů.
+ * Umožňuje hráčovi položit předmět z batohu do aktuální místnosti.
+ *
+ * @author Petr Pospíchal
+ * @version 1.0
+ */
 public class PrikazPoloz implements IPrikaz {
+    
+    /**
+     * Provede příkaz poloz - položí předmět z batohu do místnosti.
+     *
+     * @param parametry Parametry příkazu (název předmětu)
+     * @param hra Instance hry
+     * @return Zpráva o výsledku provedení příkazu
+     */
     @Override
     public String proved(String[] parametry, Hra hra) {
         if (parametry == null || parametry.length == 0) {
@@ -28,6 +43,11 @@ public class PrikazPoloz implements IPrikaz {
         return "Položil jsi předmět: " + predmet.getNazev() + " do místnosti.";
     }
 
+    /**
+     * Vrací název příkazu.
+     *
+     * @return Název příkazu ("poloz")
+     */
     @Override
     public String getNazev() {
         return "poloz";

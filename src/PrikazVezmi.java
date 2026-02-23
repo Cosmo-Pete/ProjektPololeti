@@ -1,4 +1,19 @@
+/**
+ * Příkaz pro sebírání předmětů.
+ * Umožňuje hráčovi vzít předměty z místnosti do batohu.
+ *
+ * @author Petr Pospíchal
+ * @version 1.0
+ */
 public class PrikazVezmi implements IPrikaz {
+    
+    /**
+     * Provede příkaz vezmi - přenese předmět z místnosti do batohu.
+     *
+     * @param parametry Parametry příkazu (název předmětu)
+     * @param hra Instance hry
+     * @return Zpráva o výsledku provedení příkazu
+     */
     @Override
     public String proved(String[] parametry, Hra hra) {
         if (parametry == null || parametry.length == 0) {
@@ -35,6 +50,11 @@ public class PrikazVezmi implements IPrikaz {
         return "Vzal jsi předmět: " + predmet.getNazev() + ".";
     }
 
+    /**
+     * Vrací název příkazu.
+     *
+     * @return Název příkazu ("vezmi")
+     */
     @Override
     public String getNazev() {
         return "vezmi";
