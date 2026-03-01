@@ -5,6 +5,8 @@
  * @author Petr Pospíchal
  * @version 1.0
  */
+package cz.petrp;
+
 import java.util.Scanner;
 
 public class Main {
