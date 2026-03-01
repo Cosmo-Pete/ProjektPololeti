@@ -1,5 +1,5 @@
 /**
- * Hlavní třída aplikace - vstupní bod hry Pololeti.
+ * Hlavní třída aplikace - vstupní bod hry.
  * Stará se o inicializaci hry a hlavní herní smyčku.
  *
  * @author Petr Pospíchal
