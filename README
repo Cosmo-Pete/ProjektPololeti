@@ -1,0 +1,178 @@
+# Projekt Pololeti - Uživatelský manuál
+
+## Hlavní vlastnosti hry
+- Textová adventura s kartovým bojovým systémem
+- Prozkoumávání světa s 8 unikátními lokacemi
+- Systém sběru a vylepšování karet
+- Souboje s různými protivníky
+- Inventář s předměty pro vylepšení karet
+- Finální boss v Bráně šampionů
+
+## Přehled hry
+Projekt Pololeti je textová adventura, ve které se vydávám na cestu za titulem šampiona. Hra kombinuje prvky klasické textovky s kartovým bojovým systémem. Prozkoumávám různé lokace, sbírám karty, vylepšuji je a bojuji s protivníky.
+
+## Jak hrát
+
+### Spuštění hry
+1. Ujistěte se, že máte nainstalované Java JDK (verze 8 nebo novější)
+2. Naklonujte tento repozitář nebo stáhnu zdrojové soubory
+3. Přesuňte se do adresáře projektu
+4. Zkompilujte a spusťte hru
+
+### Základní ovládání
+Hra používá textové příkazy. Zadáte příkaz a stisknu Enter. Seznam všech příkazů získáte pomocí napoveda.
+
+### Herní svět
+Hra obsahuje 8 lokací:
+- Prostranství se stromem - Startovní bod s moudrým stromem
+- Svatyně zvířat - Posvátné místo s vzácnými kartami
+- Aréna - Místo pro souboje
+- Obchod - Místo pro nákup předmětů
+- Tréninkové pole - Místo pro trénink
+- Šamanova jeskyně - Místo pro obětování karet
+- Tábor trenéra - Místo pro odpočinek
+- Brána šampionů - Finální lokace s bossem
+
+## Herní mechaniky
+
+### Karty
+Karty jsou základem bojového systému. Každá karta má:
+- Útok - Síla útoku karty
+- Obrana - Odolnost karty
+- Životy - Zdraví karty
+
+### Souboje
+1. Vyložte kartu pomocí příkazu hraj [název_karty]
+2. Zaútočte pomocí příkazu utok
+3. Po porazení protivníka získejte jeho kartu
+4. Pokud nemáte žádné karty, prohráli jste
+
+### Vylepšování karet
+- Moudrý strom - Vylepšete své karty (příkaz vylepsi [karta])
+- Vlčí šaman - Obětujte jednu kartu pro posílení jiné (příkaz obetuj [karta1] [karta2])
+
+### Předměty
+Předměty můžete najít v různých lokacích a použít je pro vylepšení karet:
+- Léčivé lektvary - Doplní životy karty
+- Amulety - Zvýší útok nebo obranu
+- Svitky - Poskytují speciální bonusy
+
+## Seznam příkazů
+
+### Základní příkazy
+- jdi [smer] - Přesunete se do jiné místnosti (sever, jih, východ, západ)
+- prozkoumej - Prozkoumáte aktuální místnost
+- pomoc - Zobrazíte základní nápovědu
+- napoveda - Zobrazíte podrobnou nápovědu
+- ukonci - Ukončíte hru
+
+### Příkazy pro karty
+- karty - Zobrazíte karty v batohu
+- hraj [karta] - Vyložíte kartu pro souboj
+- vylepsi [karta] - Vylepšíte kartu u moudrého stromu
+- obetuj [karta1] [karta2] - Obětujte kartu1 a posílíte kartu2
+
+### Příkazy pro předměty
+- vezmi [predmet] - Vezmete předmět z místnosti
+- poloz [predmet] - Položíte předmět do místnosti
+- pouzij [predmet] - Použijete předmět z batohu
+
+### Příkazy pro interakci
+- mluv - Promluvíte s postavou v místnosti
+- utok - Zaútočíte na nepřítele s aktivní kartou
+
+## Průběh hry
+
+### Začátek hry
+1. Hra začíná v "Prostranství se stromem"
+2. Máte k dispozici startovní kartu a prázdný batoh
+3. Použijte příkaz prozkoumej pro zobrazení aktuální lokace
+4. Použijte příkaz karty pro zobrazení svých karet
+
+### Typický herní postup
+1. Prozkoumáte aktuální místnost
+2. Vezmete si předměty (pokud jsou k dispozici)
+3. Promluvíte si s postavami
+4. Přesunete se do jiné místnosti
+5. Sbíráte karty a vylepšuji je
+6. Bojujete s protivníky
+7. Postupujete k Bráně šampionů
+
+### Finální souboj
+1. Dosáhnete Brány šampionů
+2. Připravíte si nejsilnější kartu
+3. Porazíte bosse a vyhraji hru!
+
+## Tipy a triky
+
+### Jak vyhrát
+- Sbíráte co nejvíce karet
+- Vylepšujte své karty u moudrého stromu
+- Obětujte slabé karty pro posílení silných
+- Používejte předměty pro dočasné vylepšení
+- Trénujte na slabších protivnících před finálním soubojem
+
+### Časté chyby
+- Zapomenutí vyložit kartu před útokem
+- Použití slabé karty proti silnému protivníkovi
+- Nevyužití vylepšení karet
+- Ignorování předmětů v místnostech
+
+## Řešení problémů
+
+### Hra nereaguje na příkazy
+- Zkontrolujte, zda jsem příkaz zapsal správně
+- Použijte příkaz napoveda pro zobrazení dostupných příkazů
+- Zkontrolujte, zda je příkaz dostupný v aktuální lokaci
+
+### Nemůžu porazit protivníka
+- Vylepším si kartu u moudrého stromu
+- Použijte předmět pro dočasné vylepšení
+- Najdu silnější kartu v jiné lokaci
+- Obětuji slabou kartu pro posílení silné karty
+
+### Ztratil jsem se
+- Použijte příkaz prozkoumej pro zobrazení dostupných východů
+- Vytvoříte si mapu herního světa
+- Vrátíte se na známé místo a zkusím jinou cestu
+
+## Cíle hry
+
+### Krátkodobé cíle:
+- Prozkoumat všechny lokace
+- Sbírat karty a předměty
+- Vylepšovat své karty
+- Porazit slabší protivníky
+
+### Dlouhodobé cíle:
+- Dosáhnout Brány šampionů
+- Porazit finálního bosse
+- Stát se šampionem
+
+## Herní statistiky
+- 8 unikátních lokací
+- 15+ různých karet
+- 10+ předmětů k použití
+- 5+ protivníků k porazení
+- 1 finální boss
+
+## Vítězství
+Hru vyhrajete, když porazím finálního bosse v Bráně šampionů. Po vítězství se zobrazí gratulační zpráva a hra se ukončí.
+
+## Technické informace
+- Jazyk: Java
+- Verze: 1.0
+- Autor: Petr Pospíchal
+- Typ: Textová adventura
+- Požadavky: Java JDK 8+
+
+## Závěr
+Projekt Pololeti je textová adventura s kartovým bojovým systémem.strategické myšlení a prozkoumávání. Doufám, že se vám hra bude líbit a že se stanete šampionem!
+
+Přeji hodně štěstí v boji!
+
+---
+
+tento manuál jsme vytvořil podle článku na githubu "How to write a good README" (https://github.com/banesullivan/README/blob/main/README.md)
+
+jméno hry bylo zmeněno z Zvířecí Aréna na Karetní Aréna
