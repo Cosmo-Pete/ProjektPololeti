@@ -30,7 +30,7 @@ public class PrikazObetuj implements IPrikaz {
         }
 
         // Kontrola, zda je hráč v jeskyni u vlčího šamana
-        if (aktualniMistnost == null || !aktualniMistnost.getNazev().equals("Jeskyně")) {
+        if (aktualniMistnost == null || !aktualniMistnost.getNazev().equals("Šamanova jeskyně")) {
             return "Obětování karty je možné pouze v jeskyni u vlčího šamana.";
         }
 
