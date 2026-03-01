@@ -42,6 +42,22 @@ public class PrikazVezmi implements IPrikaz {
             return "Předmět '" + nazevPredmetu + "' není přenositelný.";
         }
 
+        // Speciální zpracování pro karty
+        if (predmet.getNazev().equals("Karta medvěda") || predmet.getNazev().equals("Karta vlka")) {
+            // Vytvoření karty z předmětu
+            Karta karta = null;
+            if (predmet.getNazev().equals("Karta medvěda")) {
+                karta = new Karta("Medvěd", 9, 8, 22);
+            } else if (predmet.getNazev().equals("Karta vlka")) {
+                karta = new Karta("Vlk", 7, 6, 18);
+            }
+            
+            if (karta != null) {
+                batoh.pridejKartu(karta);
+                return "Vzal jsi " + nazevPredmetu + " a přidal jsi ji do svého balíčku karet.";
+            }
+        }
+
         if (!batoh.pridejPredmet(predmet)) {
             aktualniMistnost.vlozPredmet(predmet); // Vrátí předmět zpět, pokud se nepodařilo přidat do batohu
             return "Batoh je plný. Nemůžeš vzít předmět '" + nazevPredmetu + "'.";

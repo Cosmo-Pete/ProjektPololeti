@@ -11,12 +11,12 @@
         {
           "nazev": "Karta vlka",
           "popis": "Vzácná karta s vyobrazením vlka",
-          "prenositelny": false
+          "prenositelny": true
         },
         {
           "nazev": "Karta medvěda",
           "popis": "Mocná karta s vyobrazením medvěda",
-          "prenositelny": false
+          "prenositelny": true
         }
       ],
       "postava": null
@@ -41,6 +41,11 @@
         {
           "nazev": "Magický kámen",
           "popis": "Kámen s magickou energií",
+          "prenositelny": true
+        },
+        {
+          "nazev": "Karta medvěda",
+          "popis": "Mocná karta s vyobrazením medvěda",
           "prenositelny": true
         }
       ],
