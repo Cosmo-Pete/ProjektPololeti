@@ -82,6 +82,15 @@ public class PrikazPouzij implements IPrikaz {
             }
             batoh.getPredmety().remove(predmet);
             return "Použil jsi amulet ochrany. Všechny karty mají nyní o 5 obrany více.";
+        } else if (predmet.getNazev().equals("Svitok moudrosti")) {
+            // Zvýší útok, obranu i životy všech karet v batohu
+            for (Karta karta : batoh.getKarty()) {
+                karta.setUtok(karta.getUtok() + 3);
+                karta.setObrana(karta.getObrana() + 3);
+                karta.setZivoty(karta.getZivoty() + 10);
+            }
+            batoh.getPredmety().remove(predmet);
+            return "Použil jsi svitek moudrosti. Všechny karty mají nyní o 3 útoku, 3 obrany a 10 životů více.";
         } else {
             return "Předmět '" + predmet.getNazev() + "' nemá žádný účinek.";
         }
