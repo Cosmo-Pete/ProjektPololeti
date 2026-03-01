@@ -25,7 +25,7 @@ public class PrikazPomoc implements IPrikaz {
                "- pomoc: Zobrazí obecnou nápovědu.\n" +
                "- karty: Zobrazí karty v batohu.\n" +
                "- hraj [karta]: Zahraje kartu.\n" +
-               "- obetuj [předmět]: Obětuje předmět.\n" +
+               "- obetuj [obětovaná karta,karta posílená].\n" +
                "- poloz [předmět]: Položí předmět do místnosti.\n" +
                "- pouzij [předmět]: Použije předmět.\n" +
                "- vylepsi [předmět]: Vylepší předmět.\n" +
