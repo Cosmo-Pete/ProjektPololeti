@@ -42,11 +42,6 @@
           "nazev": "Magický kámen",
           "popis": "Kámen s magickou energií",
           "prenositelny": true
-        },
-        {
-          "nazev": "Karta medvěda",
-          "popis": "Mocná karta s vyobrazením medvěda",
-          "prenositelny": true
         }
       ],
       "postava": {
